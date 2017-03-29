@@ -20,7 +20,7 @@ apply plugin: "org.sonarqube"
 
 group 'org.epoxide.annj'
 archivesBaseName = "AnnJ"
-version = getVersionFromJava(file("src/main/java/org/epoxide/annj/libs/Constants.java"))
+version = getVersionFromJava(file("src/main/java/org/epoxide/annj/AnnotationDiscoverer.java"))
 
 repositories {
     
@@ -87,6 +87,7 @@ sonarqube {
     properties {
         property "sonar.host.url", "https://sonarqube.com"
         property "sonar.login", System.getenv("sonarQubeApiKey")
+        property "sonar.organization", "lclc98-github"
     }
 }
 
